@@ -1,0 +1,78 @@
+@import '../variables.scss';
+
+.blog-container {
+    @include container-size;
+    @include playfair;
+    width: 100%;
+    padding: 140px 0;
+    @include headers;
+
+    .buttons {
+        display: flex;
+        gap: 40px;
+
+        .prevBtn, .nextBtn {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    .text-container {
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(528px, 762px));
+        grid-gap: 32px;
+
+        .image{
+            max-width: 862px;
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                border-radius: 26px;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-family: 'Playfair';
+                font-size: 54px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            p {
+                padding-top: 24px;
+                line-height: 2em;
+            }
+
+            div {
+                a {
+                    padding-top: 24px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    p {
+                        color: $active-color;
+                        padding: 0;
+                    }
+    
+                    img {
+                        color: $active-color;
+                    }
+                }
+            }
+        }
+    }
+}

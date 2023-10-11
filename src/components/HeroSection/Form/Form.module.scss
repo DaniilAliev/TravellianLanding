@@ -1,0 +1,48 @@
+@import '/src/components/variables.scss';
+
+@font-face {
+  font-family: 'Playfair';
+  src: url(/public/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+.search-form-container {
+  margin-top: 170px;
+  border-radius: 0 20px 20px 0;
+  margin-right: auto;
+
+  .flex-container {
+    display: flex;
+  }
+
+  form {
+    max-width: 1300px;
+    background-color: $white-color;
+    padding: 74px 100px 74px 0;
+    padding-left: calc(152px - (0.3167px * (100vw - 1440px)));
+    display: grid;
+    grid-template-columns: repeat(4, minmax(155px, auto));
+    grid-gap: 40px;
+
+    div {
+      label {
+        p {
+          font-size: 16px;
+          color: $muted-color;
+          text-transform: uppercase;
+          margin-bottom: 12px;
+        }
+      }
+
+      .input,
+      .select {
+        width: 225px;
+        height: 35px;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-family: 'Playfair', serif;
+        font-size: 20px;
+        padding: 0;
+      }
+    }
+  }
+}

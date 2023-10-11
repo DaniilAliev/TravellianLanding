@@ -1,0 +1,55 @@
+$white-color: #FFF;
+$active-color: #FF7757;
+$muted-color: #767E86;
+$card-color: #FFF8F1;
+$black-color: #172432;
+
+$desktop1440: 1440px;
+$desktop1152: 1152px;
+$tablet: 768px;
+$mobile: 320px;
+
+@mixin container-size {
+    max-width: 1560px;
+  }
+
+@mixin playfair {
+    @font-face {
+        font-family: 'Playfair';
+        src: url(/public/fonts/PlayfairDisplay-Regular.ttf);
+      }
+}
+
+@mixin mulish {
+  @font-face {
+    font-family: 'Mulish';
+    src: url(/public/fonts/Mulish-Regular.ttf);
+  }
+}
+
+@mixin padding-32 {
+    padding: 0 32px;
+}
+
+@mixin headers {
+  .headers {
+    h1 {
+        font-size: 64px;
+        line-height: normal;
+        font-family: 'Playfair';
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .orange-border {
+        width: 365px;
+        height: 3px;
+        background-color: $active-color;
+        margin: 20px 0 32px 0;
+    }
+
+    p {
+        color: $muted-color;
+    }
+}
+}

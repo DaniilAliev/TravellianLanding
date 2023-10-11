@@ -1,0 +1,29 @@
+@import "/src/components/HeroSection/HeroSection.module.scss";
+@import "/src/components/HeroSection/Nav/Nav.module.scss";
+@import "/src/components/HeroSection/Form/Form.module.scss";
+
+
+@font-face {
+    font-family: 'Playfair';
+    src: url(/public/fonts/PlayfairDisplay-Regular.ttf);
+  }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(/fonts/Rubik-Regular.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+  font-family: 'Rubik';
+  font-size: 24px;
+}

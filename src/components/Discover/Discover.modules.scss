@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+@include playfair;
+
+section {
+    display: flex;
+    justify-content: center;
+    @include padding-32;
+
+    .headers-and-buttons-container {
+        @include container-size;
+        width: 100%;
+        margin-top: 140px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        .headers {
+            h1 {
+                font-size: 64px;
+                line-height: normal;
+                font-family: 'Playfair';
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            .orange-border {
+                width: 365px;
+                height: 3px;
+                background-color: $active-color;
+                margin: 20px 0 32px 0;
+            }
+
+            p {
+                color: $muted-color;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 40px;
+
+            .prevBtn, .nextBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .swipers {
+        padding: 100px 0 140px 0;
+        @include container-size;
+        min-width: 0;
+
+        .slide{
+            width: 497px;
+            height: 661px;
+        }
+    }
+}
