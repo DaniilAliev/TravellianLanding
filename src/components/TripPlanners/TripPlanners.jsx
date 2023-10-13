@@ -3,6 +3,8 @@ import Item from './TripPlannersItem/TripPlannersItem';
 import tripPlanners from './data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
 
 const TripPlanners = () => 
   <section>

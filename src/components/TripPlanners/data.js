@@ -2,6 +2,7 @@ import Rome from '../../../public/RomeCityTour.jpeg';
 import Paris from '../../../public/ParisCityTour.jpeg';
 import Barcelona from '../../../public/BarcelonaCityTour.jpeg';
 import Budapest from '../../../public/BudapestCityTour.jpeg';
+import Athens from '../../../public/specialOfferAthens.jpeg';
 
 const tripPlanners = [
     {
@@ -25,9 +26,9 @@ const tripPlanners = [
         img: Budapest,
     },
     {
-        city: 'Budapest',
-        price: '€89',
-        img: Budapest,
+        city: 'Athens',
+        price: '€79',
+        img: Athens,
     },
 ];
 

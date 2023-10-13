@@ -56,7 +56,6 @@ const SpecialOffer = () => {
               </SwiperSlide>
           ))}
           </Swiper>
-          
         </div>
       </section>
     </>

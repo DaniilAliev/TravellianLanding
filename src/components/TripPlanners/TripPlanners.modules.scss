@@ -4,12 +4,13 @@
     @include container-size;
     @include playfair;
     @include headers;
+    padding-bottom: 140px;
     width: 100%;
     height: 545px;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
 
     p {
         font-size: 18px;
@@ -58,7 +59,7 @@
     }
 
     .sliders-container {
-        max-width: 1226px;
+        max-width: 1062px;
         width: 100%;
         height: 100%;
       
