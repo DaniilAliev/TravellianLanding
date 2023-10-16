@@ -1,7 +1,8 @@
 @import '/src/components/variables.scss';
 
 .hero-section {
-  background-color: gray;
+  background-image: url(../../../public/background.jpeg);
+  background-size: cover;
   height: 1194px;
 
   box-sizing: border-box;

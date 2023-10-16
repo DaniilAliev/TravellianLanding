@@ -3,6 +3,9 @@ $active-color: #FF7757;
 $muted-color: #767E86;
 $card-color: #FFF8F1;
 $black-color: #172432;
+$background-card-color: #F5F6F7;
+$input-color: #FFE8D4;
+$footer-color: #172432;
 
 $desktop1440: 1440px;
 $desktop1152: 1152px;
@@ -24,6 +27,13 @@ $mobile: 320px;
   @font-face {
     font-family: 'Mulish';
     src: url(/public/fonts/Mulish-Regular.ttf);
+  }
+}
+
+@mixin rubik {
+  @font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik-Regular.ttf);
   }
 }
 

@@ -4,7 +4,9 @@ import Discover from "./components/Discover/Discover";
 import SpecialOffer from "./components/SpecialOffer/SpecialOffer";
 import OurBlog from "./components/OurBlog/OurBlog";
 import TripPlanners from "./components/TripPlanners/TripPlanners";
-import DestinationGallery from "./components/DestinationGallery/DestinationGallery";
+import DestinationGallery from "./components/DestinationGallery/DestinationGallery"; 
+import Experience from "./components/Experience/Experience";
+import Footer from "./components/Footer/Footer";
 
 const App = () =>
   <div className="container">
@@ -14,5 +16,7 @@ const App = () =>
     <OurBlog />
     <TripPlanners />
     <DestinationGallery />
+    <Experience />
+    <Footer />
   </div>
 export default App

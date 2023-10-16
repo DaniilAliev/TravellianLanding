@@ -6,9 +6,20 @@
 }
 
 .search-form-container {
+  position: relative;
   margin-top: 170px;
   border-radius: 0 20px 20px 0;
   margin-right: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 216px;
+    background-color: white;
+  }
 
   .flex-container {
     display: flex;

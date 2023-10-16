@@ -6,7 +6,6 @@ import './HeroSection.module.scss';
 const HeroSection = () => 
   <div className="hero-section">
     <Nav />
-
     <div className="text-section">
       <div className="container">
         <div className="text-hero">
@@ -17,10 +16,7 @@ const HeroSection = () =>
         </div>
         <Form />
       </div>
-      
     </div>
-
-
   </div>
 
 export default HeroSection;
