@@ -9,9 +9,15 @@ import { destinationsData } from './data';
 import Item from './Item/Item';
 import { useRef } from 'react';
 
-const Discover = () => {
+const Discover = ({ isMobile }) => {
   const swiperNextRef = useRef();
   const swiperPrevRef = useRef();
+
+  const buttons = 
+    <div className='buttons'>
+      <button className='prevBtn' onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
+      <button className='nextBtn' onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
+    </div>;
 
   return (
     <>
@@ -22,10 +28,7 @@ const Discover = () => {
             <div className='orange-border'></div>
             <p>Most popular destinations around the world, from historical places to natural wonders.</p>
           </div>
-          <div className='buttons'>
-            <button className='prevBtn' onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
-            <button className='nextBtn' onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
-          </div>
+          {!isMobile && buttons}
         </div>
       </section>
 
@@ -50,6 +53,8 @@ const Discover = () => {
           </Swiper>
         </div>
       </section>
+
+      {isMobile && <section>{buttons}</section>}
     </>
   )
 }

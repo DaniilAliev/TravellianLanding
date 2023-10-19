@@ -5,7 +5,9 @@
 .item {
     height: 100%;
     width: 497px;
-    // background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    border-radius: 26px;
 
     h3 {
         font-family: 'Playfair';
@@ -24,5 +26,22 @@
         display: flex;
         gap: 16px;
         padding-left: 24px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .item {
+        width: 100%;
+        h3 {
+            padding-top: #{padding-in-card($tablet)};
+        }
+    }
+  }
+
+@media screen and (max-width: $mobile) {
+    .item {
+        h3 {
+            padding-top: #{padding-in-card($mobile)};
+        }
     }
 }

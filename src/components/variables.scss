@@ -61,5 +61,14 @@ $mobile: 540px;
     p {
         color: $muted-color;
     }
+  }
 }
+
+@function padding-in-card($size) {
+  @if $size == $tablet {
+    @return 330px;
+  } 
+  @else if $size == $mobile {
+    @return 207px;
+  }
 }

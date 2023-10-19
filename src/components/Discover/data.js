@@ -1,25 +1,25 @@
 const card1 = {
   name: 'Monument of Berlin',
   location: 'Berlin, Germany',
-  img: 'Berlin.jpg',
+  img: 'Berlin.jpeg',
 };
 
 const card2 = {
   name: 'Millennium Bridge',
   location: 'London, United Kingdom',
-  img: 'UK.png',
+  img: 'UK.jpeg',
 };
 
 const card3 = {
   name: 'Rialto Bridge',
   location: 'Venice, Italy',
-  img: 'Italy.jpg',
+  img: 'Italy.jpeg',
 };
 
 const card4 = {
   name: 'Sea of Orange Tiles',
   location: 'Lisbon, Portugal',
-  img: 'Portugal.jpg',
+  img: 'Portugal.jpeg',
 };
 
 

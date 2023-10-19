@@ -7,11 +7,18 @@ import TripPlanners from "./components/TripPlanners/TripPlanners";
 import DestinationGallery from "./components/DestinationGallery/DestinationGallery"; 
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
+import { useEffect, useState } from "react";
+import useMobile from "./hooks/useMobile";
 
-const App = () =>
-  <div className="container">
+
+
+const App = () => {
+  let isMobile = useMobile();
+
+  return (
+    <div className="container">
     <HeroSection />
-    <Discover/>
+    <Discover isMobile={isMobile}/>
     {/* <SpecialOffer />
     <OurBlog />
     <TripPlanners />
@@ -19,4 +26,6 @@ const App = () =>
     <Experience />
     <Footer /> */}
   </div>
+  )
+}
 export default App
