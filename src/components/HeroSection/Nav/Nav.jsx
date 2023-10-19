@@ -1,4 +1,5 @@
 import Logo from '../../../../public/Logo.svg'
+import Burger from '../../../../public/hamburger.svg';
 
 const Nav = () => 
   <nav>
@@ -20,6 +21,10 @@ const Nav = () =>
       <div className='login-buttons'>
         <a href='#'>Login</a>
         <a className='signup-btn' href='#'>Signup</a>
+      </div>
+
+      <div className='burger-button'>
+        <img src={Burger} alt="menu" />
       </div>
     </div>
     

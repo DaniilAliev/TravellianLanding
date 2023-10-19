@@ -12,11 +12,11 @@ const App = () =>
   <div className="container">
     <HeroSection />
     <Discover/>
-    <SpecialOffer />
+    {/* <SpecialOffer />
     <OurBlog />
     <TripPlanners />
     <DestinationGallery />
     <Experience />
-    <Footer />
+    <Footer /> */}
   </div>
 export default App

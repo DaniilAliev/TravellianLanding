@@ -41,7 +41,8 @@ section {
             display: flex;
             gap: 40px;
 
-            .prevBtn, .nextBtn {
+            .prevBtn,
+            .nextBtn {
                 border: none;
                 background: none;
                 cursor: pointer;
@@ -54,9 +55,10 @@ section {
         @include container-size;
         min-width: 0;
 
-        .slide{
+        .slide {
             width: 497px;
             height: 661px;
         }
     }
 }
+

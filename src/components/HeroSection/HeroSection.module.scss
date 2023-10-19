@@ -42,3 +42,60 @@
     }
   }  
 }
+
+@media screen and (max-width: $desktop1152) {
+.hero-section {
+  height: 880px;
+  .text-section {
+    .container {
+      .text-hero {
+        margin-top: 72px;
+
+        div {
+          h1 {
+            font-size: 64px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero-section {
+    // height: 880px;
+    .text-section {
+      .container {
+        .text-hero {
+          margin-top: 72px;
+  
+          div {
+            h1 {
+              font-size: 54px;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+  .hero-section {
+    height: 1210px;
+    .text-section {
+      .container {
+        .text-hero {
+          margin-top: 72px;
+  
+          div {
+            h1 {
+              font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+}

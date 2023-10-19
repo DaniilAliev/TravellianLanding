@@ -24,6 +24,14 @@ nav {
     grid-template-columns: repeat(3, auto);
     grid-gap: 35px;
 
+    .logo {
+      display: block;
+    }
+
+    .burger-button {
+      display: none;
+    }
+
     .nav-bar {
       display: flex;
       justify-content: center;
@@ -54,6 +62,27 @@ nav {
     a {
       border-bottom: 3px solid $active-color;
       font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  nav {
+    div {
+      .logo {
+        img {
+          width: 55%;
+        }
+      }
+
+      .burger-button {
+        display: block;
+      }
+
+      .nav-bar,
+      .login-buttons {
+        display: none;
+      }
     }
   }
 }
