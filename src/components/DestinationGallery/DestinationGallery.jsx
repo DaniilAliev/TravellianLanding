@@ -8,7 +8,7 @@ import 'swiper/css/free-mode';
 import images from './images';
 import { useRef } from 'react';
 
-const DestinationGallery = () => {
+const DestinationGallery = ({ isMobile }) => {
   const swiperNextRef = useRef();
   const swiperPrevRef = useRef();
 
@@ -21,7 +21,7 @@ const DestinationGallery = () => {
             <div className='orange-border'></div>
             <p>Our photo gallery on trip</p>
           </div>
-          <div className='buttons'>
+          {!isMobile && <div className='buttons'>
             <button className='prevBtn' 
               onClick={() => swiperPrevRef.current.slidePrev()}
             >
@@ -32,12 +32,12 @@ const DestinationGallery = () => {
             >
               <img src={nextButton} alt="next" />
             </button>
-          </div>
+          </div>}
         </div>
     </section>
 
     <section>
-      <div className='swipers'>
+      {!isMobile && <div className='swipers'>
         <Swiper
           slidesPerView='auto'
           spaceBetween={32}
@@ -57,9 +57,17 @@ const DestinationGallery = () => {
             </SwiperSlide>
           ))}
           </Swiper>
-
-        </div>
+        </div>}
     </section>
+
+    {isMobile && 
+    <section>
+      {images.map((image) => (
+        <div className='image' key={image}>
+          <img src={image} alt="" />
+        </div>
+      ))}
+    </section>}
     </>
   )
 };

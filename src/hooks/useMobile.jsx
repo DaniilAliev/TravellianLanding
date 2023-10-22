@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+let mobileSize = 860;
+
 const useMobile = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -10,7 +12,7 @@ const useMobile = () => {
     window.addEventListener('resize', handleResize)
   }, []);
 
-  return (width < 860);
+  return (width < mobileSize);
 };
 
 export default useMobile;

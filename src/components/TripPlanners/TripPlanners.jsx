@@ -6,7 +6,32 @@ import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-const TripPlanners = () => 
+const SliderContainer = () => 
+    <Swiper
+      slidesPerView='auto'
+      spaceBetween={32}
+      freeMode={false}
+      modules={[FreeMode]}
+      className="mySwiper trip-planners"
+    >
+    {tripPlanners.map((item) => (
+      <SwiperSlide key={item.city}>
+        <Item item={item} key={item.city} />
+      </SwiperSlide>
+    ))}
+    </Swiper>;
+  
+const NoSwiperContainer = ({ isMobile }) => 
+  <section>
+    <div>
+    {tripPlanners.map((item) => (
+        <Item item={item} key={item.city} isMobile={isMobile}/>
+    ))}
+    </div>
+  </section>;
+
+const TripPlanners = ({ isMobile }) => 
+<>
   <section>
     <div className='general-container'>
       <div className='description'>
@@ -24,23 +49,15 @@ const TripPlanners = () =>
         </div>
       </div>
 
-      <div className='sliders-container'>
-      <Swiper
-          slidesPerView='auto'
-          spaceBetween={32}
-          freeMode={false}
-          modules={[FreeMode]}
-          className="mySwiper trip-planners"
-        >
-        {tripPlanners.map((item) => (
-          <SwiperSlide key={item.city}>
-            <Item item={item} key={item.city} />
-          </SwiperSlide>
-        ))}
-        </Swiper>
-      </div>
+        {!isMobile && 
+        <div className='sliders-container'>
+          < SliderContainer />
+        </div>
+        }
     </div>
-  </section>
-;
+  </section>;
+
+  {isMobile && <NoSwiperContainer  isMobile={isMobile}/>}
+</>
 
 export default TripPlanners;

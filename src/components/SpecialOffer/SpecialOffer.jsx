@@ -9,26 +9,21 @@ import 'swiper/css/free-mode';
 import specialOfferData from './data';
 import { useRef } from 'react';
 
-const SpecialOffer = () => {
+const SpecialOffer = ({ isMobile }) => {
   const swiperNextRef = useRef();
   const swiperPrevRef = useRef();
+
+  const buttons = 
+    <div className='buttons'>
+      <button className='prevBtn' onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
+      <button className='nextBtn' onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
+    </div>;
 
   return (
     <>
       <section>
         <div className='headers-and-buttons-container'>
-          <div className='buttons'>
-            <button className='prevBtn'
-            onClick={() => swiperPrevRef.current.slidePrev()}
-            >
-              <img src={prevButton} alt="prev" />
-            </button>
-            <button className='nextBtn'
-            onClick={() => swiperNextRef.current.slideNext()}
-            >
-              <img src={nextButton} alt="next" />
-            </button>
-          </div>
+          {!isMobile && buttons}
           <div className='headers'>
             <h1>Special Offer</h1>
             <div className='orange-border'></div>
@@ -58,6 +53,8 @@ const SpecialOffer = () => {
           </Swiper>
         </div>
       </section>
+
+      {isMobile && <section>{buttons}</section>}
     </>
   )
 }

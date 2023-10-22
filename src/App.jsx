@@ -19,12 +19,12 @@ const App = () => {
     <div className="container">
     <HeroSection />
     <Discover isMobile={isMobile}/>
-    {/* <SpecialOffer />
+    <SpecialOffer isMobile={isMobile}/>
     <OurBlog />
-    <TripPlanners />
-    <DestinationGallery />
-    <Experience />
-    <Footer /> */}
+    <TripPlanners isMobile={isMobile}/>
+    <DestinationGallery isMobile={isMobile}/>
+    <Experience isMobile={isMobile}/>
+    <Footer />
   </div>
   )
 }

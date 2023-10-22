@@ -1,11 +1,12 @@
 @import "/src/components/HeroSection/HeroSection.module.scss";
 @import "/src/components/HeroSection/Nav/Nav.module.scss";
 @import "/src/components/HeroSection/Form/Form.module.scss";
+@import "/src/components/variables.scss";
 
 
 @font-face {
-    font-family: 'Playfair';
-    src: url(/public/fonts/PlayfairDisplay-Regular.ttf);
+  font-family: 'Playfair';
+  src: url(/public/fonts/PlayfairDisplay-Regular.ttf);
   }
 
 @font-face {
@@ -26,4 +27,10 @@ body {
 p {
   font-family: 'Rubik';
   font-size: 24px;
+}
+
+@media screen and (max-width: $mobile) {
+  p {
+    font-size: 18px;
+  }
 }

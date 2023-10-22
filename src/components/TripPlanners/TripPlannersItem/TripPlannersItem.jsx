@@ -2,7 +2,7 @@ import './TripPlannersItem.modules.scss';
 import Star from '../../../../public/star.svg';
 import { useState } from 'react';
 
-const Item = ({ item }) => {
+const Item = ({ item, isMobile }) => {
   const [isHovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -13,12 +13,14 @@ const Item = ({ item }) => {
     setHovered(false);
   };
 
+  console.log((isHovered || isMobile))
+
   return (
 		<div className='trip-planners-card'>
 			<div className={`image ${isHovered ? 'hovered' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
 				<img src={item.img} alt="" />
 			</div>
-      {isHovered && 
+      {(isHovered || isMobile) && 
         <div className={`info ${isHovered ? 'visible' : ''}`}>
 				<div>
 					<p>GUIDED TOUR</p>

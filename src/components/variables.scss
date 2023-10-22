@@ -8,7 +8,7 @@ $input-color: #FFE8D4;
 $footer-color: #172432;
 
 $desktop1440: 1440px;
-$desktop1152: 1152px;
+$desktop1152: 1149px;
 $tablet: 860px;
 $mobile: 540px;
 
@@ -52,7 +52,7 @@ $mobile: 540px;
     }
 
     .orange-border {
-        width: 365px;
+        max-width: 365px;
         height: 3px;
         background-color: $active-color;
         margin: 20px 0 32px 0;
@@ -60,6 +60,22 @@ $mobile: 540px;
 
     p {
         color: $muted-color;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .headers {
+      h1 {
+        font-size: 54px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .headers {
+      h1 {
+        font-size: 40px;
+      }
     }
   }
 }

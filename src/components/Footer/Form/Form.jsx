@@ -1,6 +1,7 @@
 import './Form.modules.scss';
 
 const Form = () => 
+  <div className='newsletter-form-wrapper'>
   <div className='newsletter-form'>
     <h1>Our Newsletter</h1>
     <form>
@@ -10,6 +11,7 @@ const Form = () =>
         <button>Subscribe</button>
       </div>
     </form>
+  </div>
   </div>
 ;
 

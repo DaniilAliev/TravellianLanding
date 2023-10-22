@@ -12,7 +12,7 @@
         
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
             max-width: 100%;
             max-height: 100%;
             object-fit: cover;
@@ -21,7 +21,7 @@
         }
     }
 
-    .info{
+    .info {
         padding: 40px 24px;
 
         h3{
@@ -51,6 +51,7 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                font-size: 20px;
     
                 span{
                     color: $active-color;
@@ -66,6 +67,29 @@
                 font-size: 20px;
                 border-radius: 12px;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .card{
+        width: 100%;
+        // h3 {
+        //     padding-top: #{padding-in-card($tablet)};
+        // }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .card{
+        .info {
+            .details {
+                display: block;
+
+                button {
+                    margin-top: 20px;
+                }
             }
         }
     }

@@ -8,17 +8,14 @@
     padding-bottom: 260px;
 
     .swipers {
-
         .experience-swiper {
-            height: 383px;
+            height: auto;
 
             .experience-slide {
                 max-width: 663px;
                 width: 100%;
-                
             }
         }
-        
     }
 
     .buttons{
@@ -30,5 +27,42 @@
             background: none;
         }
     }
+}
 
+@media screen and (max-width: $desktop1440) {
+    .experiences-container {
+        .swipers {
+            .experience-swiper {
+                .experience-slide {
+                    max-width: 562px;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: $desktop1152) {
+    .experiences-container {
+        .swipers {
+            .experience-swiper {
+                .experience-slide {
+                    max-width: 500px;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: $tablet) {
+    .experiences-container {
+        padding-bottom: 160px;
+
+        .headers {
+            margin-top: 160px;
+        }
+
+        .buttons{
+            justify-content: center;
+        }
+    }  
 }
