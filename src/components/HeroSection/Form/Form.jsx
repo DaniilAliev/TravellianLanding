@@ -6,9 +6,16 @@ import Button from '../Button/Button';
 import styles from './Form.module.scss';
 
 const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
+  { value: 'Berlin', label: 'Berlin' },
+  { value: 'London', label: 'London' },
+  { value: 'Venice', label: 'Venice'},
+  { value: 'Lisbon', label: 'Lisbon'},
+  { value: 'Athens', label: 'Athens'},
+  { value: 'Rome', label: 'Rome'},
+  { value: 'Venice', label: 'Venice'},
+  { value: 'Paris', label: 'Paris'},
+  { value: 'Barcelona', label: 'Barcelona'},
+  { value: 'Budapest', label: 'Budapest'},
 ]
 
 const customStyles = {
@@ -57,7 +64,7 @@ const Form = () => {
         
       <div>
         <label><p>Check-in</p></label>
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className={styles.select}/>
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className={`${styles.select} ${styles.datepicker}`}/>
       </div>
 
       <div>

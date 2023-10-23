@@ -58,13 +58,14 @@
 
 @media screen and (max-width: $tablet) {
   .experiences-container {
-    padding-bottom: 160px;
+    padding: 20px 0 160px 0;
 
     .headers {
       margin-top: 160px;
     }
 
     .buttons{
+      margin-top: 100px;
       justify-content: center;
     }
   }  
