@@ -1,118 +1,119 @@
 @import '../variables.scss';
 
 .blog-container {
-    @include container-size;
-    @include playfair;
-    width: 100%;
-    padding: 140px 0;
-    @include headers;
+  @include container-size;
+	@include playfair;
+	width: 100%;
+	padding: 140px 0 100px 0;
+	@include headers;
 
-    .buttons {
-        display: flex;
-        gap: 40px;
+  .buttons {
+		display: flex;
+		gap: 40px;
 
-        .prevBtn, .nextBtn {
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
+    .prevBtn, .nextBtn {
+			background: none;
+			cursor: pointer;
+      border: none;
+    }
+  }
+
+  .text-container {
+		padding-top: 100px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(380px, 762px));
+		grid-gap: 32px;
+
+    .image{
+      max-width: 862px;
+			width: 100%;
+
+    	img{
+        width: 100%;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: cover;
+				object-position: center center;
+				border-radius: 26px;
+      }
     }
 
-    .text-container {
-        padding-top: 100px;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(380px, 762px));
-        grid-gap: 32px;
+    article {
+      display: flex;
+			flex-direction: column;
+			justify-content: center;
 
-        .image{
-            max-width: 862px;
-            width: 100%;
+    	h1 {
+        font-family: 'Playfair';
+				font-size: 54px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+      }
 
-            img{
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: cover;
-                object-position: center center;
-                border-radius: 26px;
-            }
-        }
+      p {
+        padding-top: 24px;
+				line-height: 2em;
+      }
 
-        article {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            h1 {
-                font-family: 'Playfair';
-                font-size: 54px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            p {
-                padding-top: 24px;
-                line-height: 2em;
-            }
-
-            div {
-                a {
-                    padding-top: 24px;
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-                    p {
-                        color: $active-color;
-                        padding: 0;
-                    }
+      div {
+        a {
+          padding-top: 24px;
+					display: flex;
+					align-items: center;
+					gap: 20px;
+          
+					p {
+            color: $active-color;
+						padding: 0;
+          }
     
-                    img {
-                        color: $active-color;
-                    }
-                }
-            }
+          img {
+            color: $active-color;
+          }
         }
-    }
+      }
+	  }
+  }
 }
 
 @media screen and (max-width: $desktop1152)  {
-    .blog-container {
-        padding: 100px 0;
-        
-        .text-container {
-            article {
-                p {
-                    font-size: 18px;
-                }
-            }
+  .blog-container {
+    padding: 100px 0;
+    
+    .text-container {
+      article {
+        p {
+          font-size: 18px;
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: $tablet) {
-    .blog-container {
-        padding: 80px 0;
+  .blog-container {
+    padding: 80px 0;
 
-        .text-container {
-            display: block;
+    .text-container {
+      display: block;
 
-            article {
-                padding-top: 32px;
-            }
-        }
+      article {
+        padding-top: 32px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: $mobile) {
-    .blog-container {
-        .text-container {
-            article {
-                h1 {
-                    font-size: 40px;
-                }
-            }
+  .blog-container {
+    .text-container {
+      article {
+        h1 {
+          font-size: 40px;
         }
+      }
     }
+  }
 }

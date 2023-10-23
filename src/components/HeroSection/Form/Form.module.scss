@@ -71,7 +71,7 @@
     }
     form {
       grid-template-rows: repeat(2, 62px);
-      grid-template-columns: repeat(2, minmax(0, 158px));
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

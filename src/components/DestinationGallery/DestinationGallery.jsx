@@ -1,4 +1,4 @@
-import './DestinationGallery.modules.scss';
+import styles from './DestinationGallery.module.scss';
 import prevButton from '../../../public/chevron-down.svg'
 import nextButton from '../../../public/chevron-up.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,19 +15,19 @@ const DestinationGallery = ({ isMobile }) => {
   return (
     <>
     <section>
-      <div className='headers-and-buttons-container'>
-          <div className='headers'>
+      <div className={styles['headers-and-buttons-container']}>
+          <div className={styles.headers}>
             <h1>Destination Gallery</h1>
-            <div className='orange-border'></div>
+            <div className={styles['orange-border']}></div>
             <p>Our photo gallery on trip</p>
           </div>
-          {!isMobile && <div className='buttons'>
-            <button className='prevBtn' 
+          {!isMobile && <div className={styles.buttons}>
+            <button className={styles.prevBtn} 
               onClick={() => swiperPrevRef.current.slidePrev()}
             >
               <img src={prevButton} alt="prev" />
             </button>
-            <button className='nextBtn' 
+            <button className={styles.nextBtn} 
             onClick={() => swiperNextRef.current.slideNext()}
             >
               <img src={nextButton} alt="next" />
@@ -37,7 +37,7 @@ const DestinationGallery = ({ isMobile }) => {
     </section>
 
     <section>
-      {!isMobile && <div className='swipers'>
+      {!isMobile && <div className={styles.swipers}>
         <Swiper
           slidesPerView='auto'
           spaceBetween={32}
@@ -47,27 +47,25 @@ const DestinationGallery = ({ isMobile }) => {
             swiperNextRef.current = swiper;
             swiperPrevRef.current = swiper;
           }}
-          className="mySwiper destination-gallery"
+          className={`${styles.mySwiper} ${styles["destination-gallery"]}`}
         >
           {images.map((image) => (
-            <SwiperSlide key={image} className='slide'>
-              <div className='image'>
+            <SwiperSlide key={image} className={styles.slide}>
+              <div className={styles.image}>
                 <img src={image} alt="" />
               </div>
             </SwiperSlide>
           ))}
           </Swiper>
         </div>}
+      {isMobile && 
+        images.map((image) => (
+          <div className={styles.image} key={image}>
+            <img src={image} alt="" />
+          </div>
+        ))
+      } 
     </section>
-
-    {isMobile && 
-    <section>
-      {images.map((image) => (
-        <div className='image' key={image}>
-          <img src={image} alt="" />
-        </div>
-      ))}
-    </section>}
     </>
   )
 };

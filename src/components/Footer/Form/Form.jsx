@@ -1,12 +1,12 @@
-import './Form.modules.scss';
+import styles from './Form.module.scss';
 
 const Form = () => 
-  <div className='newsletter-form-wrapper'>
-  <div className='newsletter-form'>
+  <div className={styles['newsletter-form-wrapper']}>
+  <div className={styles['newsletter-form']}>
     <h1>Our Newsletter</h1>
     <form>
       <label htmlFor=""><p>Email</p></label>
-      <div className='inputs'>
+      <div className={styles.inputs}>
         <input placeholder='Enter your email'></input>
         <button>Subscribe</button>
       </div>

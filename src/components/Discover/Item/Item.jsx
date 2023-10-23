@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import './Item.modules.scss';
+import styles from './Item.module.scss';
 import locationImg from '../../../../public/locationImage.png'
 
 
 const Item = ({ item }) => (
-  <div className='item' style={{ backgroundImage: `url(${item.img})`}}>
+  <div className={styles.item} style={{ backgroundImage: `url(${item.img})`}}>
     <h3>{item.name}</h3>
     <div>
       <img src={locationImg} alt="" />

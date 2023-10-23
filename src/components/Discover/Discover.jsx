@@ -1,4 +1,4 @@
-import './Discover.modules.scss';
+import styles from './Discover.module.scss';
 import prevButton from '../../../public/chevron-down.svg'
 import nextButton from '../../../public/chevron-up.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,18 +14,18 @@ const Discover = ({ isMobile }) => {
   const swiperPrevRef = useRef();
 
   const buttons = 
-    <div className='buttons'>
-      <button className='prevBtn' onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
-      <button className='nextBtn' onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
+    <div className={styles.buttons}>
+      <button className={styles.prevBtn} onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
+      <button className={styles.nextBtn} onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
     </div>;
 
   return (
     <>
       <section>
-        <div className='headers-and-buttons-container'>
-          <div className='headers'>
+        <div className={styles['headers-and-buttons-container']}>
+          <div className={styles.headers}>
             <h1>Popular Destinations</h1>
-            <div className='orange-border'></div>
+            <div className={styles['orange-border']}></div>
             <p>Most popular destinations around the world, from historical places to natural wonders.</p>
           </div>
           {!isMobile && buttons}
@@ -33,7 +33,7 @@ const Discover = ({ isMobile }) => {
       </section>
 
       <section>
-        <div className='swipers'>
+        <div className={styles.swipers}>
           <Swiper
             slidesPerView='auto'
             spaceBetween={32}
@@ -43,10 +43,10 @@ const Discover = ({ isMobile }) => {
               swiperNextRef.current = swiper;
               swiperPrevRef.current = swiper;
             }}
-            className="mySwiper"
+            className={styles.mySwiper}
           >
             {destinationsData.map((item) => (
-              <SwiperSlide key={item.name} className='slide'>
+              <SwiperSlide key={item.name} className={styles.slide}>
                 <Item item={item} />
               </SwiperSlide>))
             }

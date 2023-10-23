@@ -1,4 +1,4 @@
-import './SpecialOffer.modules.scss';
+import styles from './SpecialOffer.module.scss';
 import prevButton from '../../../public/chevron-down.svg';
 import nextButton from '../../../public/chevron-up.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,26 +14,26 @@ const SpecialOffer = ({ isMobile }) => {
   const swiperPrevRef = useRef();
 
   const buttons = 
-    <div className='buttons'>
-      <button className='prevBtn' onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
-      <button className='nextBtn' onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
+    <div className={styles.buttons}>
+      <button className={styles.prevBtn} onClick={() => swiperPrevRef.current.slidePrev()}><img src={prevButton} alt="prev" /></button>
+      <button className={styles.nextBtn} onClick={() => swiperNextRef.current.slideNext()}><img src={nextButton} alt="next" /></button>
     </div>;
 
   return (
     <>
       <section>
-        <div className='headers-and-buttons-container'>
+        <div className={styles['headers-and-buttons-container']}>
           {!isMobile && buttons}
-          <div className='headers'>
+          <div className={styles.headers}>
             <h1>Special Offer</h1>
-            <div className='orange-border'></div>
+            <div className={styles['orange-border']}></div>
             <p>Check out our special offer and discounts</p>
           </div>
         </div>
       </section>
 
       <section>
-        <div className='swipers'>
+        <div className={styles.swipers}>
           <Swiper
             slidesPerView='auto'
             spaceBetween={32}
@@ -43,10 +43,10 @@ const SpecialOffer = ({ isMobile }) => {
               swiperNextRef.current = swiper;
               swiperPrevRef.current = swiper;
             }}
-            className="mySwiper special-offer"
+            className={`${styles.mySwiper} ${styles['special-offer']}`}
           >
             {specialOfferData.map((item) => (
-              <SwiperSlide key={item.city} className='slide'>
+              <SwiperSlide key={item.city} className={styles.slide}>
                 <Item item={item}/>
               </SwiperSlide>
           ))}

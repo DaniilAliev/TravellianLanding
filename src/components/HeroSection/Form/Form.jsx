@@ -3,6 +3,7 @@ import Select from 'react-select';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Button from '../Button/Button';
+import styles from './Form.module.scss';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -19,15 +20,15 @@ const customStyles = {
     boxShadow: state.isFocused ? '0 0 0 1px #FF7757' : 'none',
   }),
   indicatorSeparator: () => ({
-    display: 'none', // Убираем вертикальную палку
+    display: 'none', 
   }),
   singleValue: (provided) => ({
     ...provided,
-    fontSize: '20px', // Размер шрифта 20 пикселей
-    fontFamily: 'Playfair', // Шрифт Playfair
-    left: 0, // Позиционируем текст у самой левой границы
-    transform: 'none', // Отменяем трансформацию
-    paddingLeft: 0, // Убираем внутренний отступ (padding)
+    fontSize: '20px',
+    fontFamily: 'Playfair',
+    left: 0, 
+    transform: 'none', 
+    paddingLeft: 0, 
   }),
 }
 
@@ -36,17 +37,17 @@ const Form = () => {
   const [leaveDate, setLeaveDate] = useState(new Date());
 
   return (
-  <div className="search-form-container">
-    <div className='flex-container'>
+  <div className={styles["search-form-container"]}>
+    <div className={styles['flex-container']}>
     <form>
       <div>
         <label><p>Destination</p></label>
-        <Select options={options} className='input customSelect' styles={customStyles}/>
+        <Select options={options} className={`${styles.input} ${styles.customSelect}`} styles={customStyles}/>
       </div>
 
       <div>
         <label><p>Person</p></label>
-        <select className='select'>
+        <select className={styles.select}>
           <option value="option1">1</option>
           <option value="option2">2</option>
           <option value="option3">3</option>
@@ -56,12 +57,12 @@ const Form = () => {
         
       <div>
         <label><p>Check-in</p></label>
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className='select'/>
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className={styles.select}/>
       </div>
 
       <div>
         <label><p>Check-out</p></label>
-        <DatePicker selected={leaveDate} onChange={(date) => setLeaveDate(date)} className='select datepicker'/>
+        <DatePicker selected={leaveDate} onChange={(date) => setLeaveDate(date)} className={`${styles.select} ${styles.datepicker}`}/>
       </div>
     </form>
 

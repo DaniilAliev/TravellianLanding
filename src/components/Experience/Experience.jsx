@@ -1,4 +1,4 @@
-import './Experience.modules.scss';
+import styles from './Experience.module.scss';
 import experienseData from './experienseData';
 import ExperienseItem from './ExperienceItem/ExperienceItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,14 +15,14 @@ const Experience = () => {
 
   return (
     <section>
-      <div className='experiences-container'>
-        <div className='headers'>
+      <div className={styles['experiences-container']}>
+        <div className={styles.headers}>
           <h1>Traveler’s Experiences</h1>
-          <div className='orange-border'></div>
+          <div className={styles['orange-border']}></div>
           <p>Here some awesome feedback from our travelers</p>
         </div>
 
-        <div className='swipers'>
+        <div className={styles.swipers}>
         <Swiper
           slidesPerView='auto'
           spaceBetween={32}
@@ -32,23 +32,23 @@ const Experience = () => {
             swiperNextRef.current = swiper;
             swiperPrevRef.current = swiper;
           }}
-          className="mySwiper experience-swiper"
+          className={styles["experience-swiper"]}
         >
           {experienseData.map((item) => (
-            <SwiperSlide key={item.name} className='experience-slide'>
+            <SwiperSlide key={item.name} className={styles['experience-slide']}>
               <ExperienseItem item={item} />
             </SwiperSlide>
           ))}
           </Swiper>
         </div>
 
-        <div className='buttons'>
-            <button className='prevBtn' 
+        <div className={styles.buttons}>
+            <button className={styles.prevBtn} 
               onClick={() => swiperPrevRef.current.slidePrev()}
             >
               <img src={prevButton} alt="prev" />
             </button>
-            <button className='nextBtn' 
+            <button className={styles.nextBtn}
             onClick={() => swiperNextRef.current.slideNext()}
             >
               <img src={nextButton} alt="next" />

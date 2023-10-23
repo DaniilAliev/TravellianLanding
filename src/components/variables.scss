@@ -88,3 +88,18 @@ $mobile: 540px;
     @return 207px;
   }
 }
+
+@mixin buttons {
+  .buttons {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 80px;
+
+    .prevBtn,
+    .nextBtn {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+}
+}

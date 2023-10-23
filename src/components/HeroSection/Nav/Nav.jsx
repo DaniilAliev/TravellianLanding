@@ -1,16 +1,17 @@
 import Logo from '../../../../public/Logo.svg'
 import Burger from '../../../../public/hamburger.svg';
+import styles from './Nav.module.scss';
 
 const Nav = () => 
   <nav>
     <div>
-      <div className='logo'>
+      <div className={styles.logo}>
         <img src={Logo}></img>
       </div>
 
-      <div className='nav-bar'>
+      <div className={styles['nav-bar']}>
         <ul>
-          <li className='active'><a href='#'>Home</a></li>
+          <li className={styles.active}><a href='#'>Home</a></li>
           <li><a href='#'>Explore</a></li>
           <li><a href='#'>Travel</a></li>
           <li><a href='#'>Blog</a></li>
@@ -18,12 +19,12 @@ const Nav = () =>
         </ul>
       </div>
 
-      <div className='login-buttons'>
+      <div className={styles['login-buttons']}>
         <a href='#'>Login</a>
-        <a className='signup-btn' href='#'>Signup</a>
+        <a className={styles['signup-btn']} href='#'>Signup</a>
       </div>
 
-      <div className='burger-button'>
+      <div className={styles['burger-button']}>
         <img src={Burger} alt="menu" />
       </div>
     </div>

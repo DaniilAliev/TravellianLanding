@@ -69,6 +69,8 @@ nav {
 @media screen and (max-width: $tablet) {
   nav {
     div {
+      grid-template-columns: repeat(2, auto);
+
       .logo {
         img {
           width: 55%;
@@ -76,7 +78,8 @@ nav {
       }
 
       .burger-button {
-        display: block;
+        display: flex;
+        justify-content: end;
       }
 
       .nav-bar,

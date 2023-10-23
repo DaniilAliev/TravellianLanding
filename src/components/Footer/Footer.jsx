@@ -1,4 +1,4 @@
-import './Footer.modules.scss';
+import styles from './Footer.module.scss';
 import Form from './Form/Form';
 import Logo from '../../../public/Logo.svg';
 import Facebook from '../../../public/facebook.svg';
@@ -12,16 +12,16 @@ const Footer = () =>
 				<Form />
 		</section>
 
-		<div className='info'>
+		<div className={styles.info}>
 			<section>
-				<div className='container'>
+				<div className={styles.container}>
 					<div>
 						<img src={Logo} alt="Logo" />
-						<p className='rights-reserved'>Copyright © Travellian 2020 All rights reserved</p>
+						<p className={styles['rights-reserved']}>Copyright © Travellian 2020 All rights reserved</p>
 					</div>
 
 					<div>
-						<p className='bold-p'>Menu</p>
+						<p className={styles['bold-p']}>Menu</p>
 						<a href="#"><p>Home</p></a>
 						<a href="#"><p>Explore</p></a>
 						<a href="#"><p>Travel</p></a>
@@ -30,7 +30,7 @@ const Footer = () =>
 					</div>
 
 					<div>
-						<p className='bold-p'>Information</p>
+						<p className={styles['bold-p']}>Information</p>
 						<a href="#"><p>Destinations</p></a>
 						<a href="#"><p>Supports</p></a>
 						<a href="#"><p>Terms & Conditions</p></a>
@@ -38,15 +38,15 @@ const Footer = () =>
 					</div>
 
 					<div>
-						<p className='bold-p'>Contact Info</p>
+						<p className={styles['bold-p']}>Contact Info</p>
 						<a href="#"><p>+123 456 789</p></a>
 						<a href="#"><p>info@travellian.com</p></a>
 						<a href="#"><p>1245, New Yourk, USA</p></a>
 					</div>
 
 					<div>
-						<p className='bold-p'>Follow us on</p>
-						<div className='socials'>
+						<p className={styles['bold-p']}>Follow us on</p>
+						<div className={styles.socials}>
 							<img src={Facebook} alt="" />
 							<img src={Pinterest} alt="" />
 							<img src={Insta} alt="" />
@@ -57,6 +57,5 @@ const Footer = () =>
 			</section>
 		</div>
 	</footer>
-;
 
 export default Footer;
