@@ -41,6 +41,10 @@
         }
       }
 
+      .input {
+        width: auto;
+      }
+
       .input,
       .select {
         width: 100%;
@@ -53,6 +57,16 @@
         font-family: 'Playfair', serif;
         font-size: 20px;
         padding: 0;
+
+        .datepicker {
+          width: 100%;
+          background-color: $white-color;
+          color: $black-color;
+          border: none;
+          font-family: 'Playfair', serif;
+          font-size: 20px;
+          padding: 0;
+        }
       }
     }
   }
@@ -71,6 +85,7 @@
     &::before {
       height: 312px;
     }
+
     form {
       grid-template-rows: repeat(2, 62px);
       grid-template-columns: repeat(2, 1fr);

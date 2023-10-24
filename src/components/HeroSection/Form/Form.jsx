@@ -64,12 +64,16 @@ const Form = () => {
         
       <div>
         <label><p>Check-in</p></label>
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className={`${styles.select} ${styles.datepicker}`}/>
+        <div className={styles.select}>
+          <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className={styles.datepicker}/>
+        </div>
       </div>
 
       <div>
         <label><p>Check-out</p></label>
-        <DatePicker selected={leaveDate} onChange={(date) => setLeaveDate(date)} className={`${styles.select} ${styles.datepicker}`}/>
+        <div className={styles.select}>
+          <DatePicker selected={leaveDate} onChange={(date) => setLeaveDate(date)} className={styles.datepicker}/>
+        </div>
       </div>
     </form>
 

@@ -38,13 +38,24 @@ nav {
       max-width: 420px;
       width: 100%;
 
+      
       ul {
         width: 100%;
         display: flex;
         justify-content: space-between;
         list-style: none;
+
+        
+        .active {
+          a {
+            border-bottom: 3px solid $active-color;
+            font-weight: bold;
+          }
+        }
       }
     }
+
+    
 
     .login-buttons {
       display: flex;
@@ -58,10 +69,62 @@ nav {
     }
   }
 
-  .active {
-    a {
-      border-bottom: 3px solid $active-color;
-      font-weight: bold;
+  .nav-bar-dropdown {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $active-color;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 30px 32px;
+
+    &.open {
+      animation: fadeIn 0.2s ease forwards;
+    }
+  
+    &.closed {
+      animation: fadeOut 0.2s ease forwards;
+    }
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        visibility: visible;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .nav {
+      ul {
+        list-style: none;
+
+        li{
+          padding-top: 20px;
+        }
+
+        .active {
+          a {
+            border-bottom: 3px solid $muted-color;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
