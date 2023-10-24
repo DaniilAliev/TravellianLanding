@@ -22,7 +22,7 @@ const Nav = () => {
     setTimeout(() => {
       setIsMenuOpen(!isMenuOpen);
       setIsClosing(false);
-    }, 500); // 500 миллисекунд - время анимации fadeOut
+    }, 200); // 500 миллисекунд - время анимации fadeOut
   };
 
   return (
