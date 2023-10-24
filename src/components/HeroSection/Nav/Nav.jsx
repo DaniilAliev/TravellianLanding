@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Logo from '../../../../public/Logo.svg'
 import Burger from '../../../../public/hamburger.svg';
 import styles from './Nav.module.scss';
+import { useMemo } from 'react';
 
 const NavList = () => (
   <ul>
@@ -16,6 +17,12 @@ const NavList = () => (
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+
+  const burgerImage = useMemo(() => {
+    const img = new Image();
+    img.src = Burger;
+    return img;
+  }, []);
 
   const toggleMenu = () => {
     setIsClosing(true);
@@ -43,7 +50,7 @@ const Nav = () => {
       </div>
 
       <div className={styles['burger-button']} onClick={toggleMenu}>
-        <img src={Burger} alt="menu" />
+        <img src={burgerImage.src} alt="menu" />
       </div>
     </div>
 
@@ -51,7 +58,7 @@ const Nav = () => {
         <div className={`${styles['nav-bar-dropdown']} ${isMenuOpen ? styles.open : (isClosing ? styles.closed : '')}`}>
 
           <div className={styles['burger-button']} onClick={toggleMenu}>
-            <img src={Burger} alt="menu" />
+            <img src={burgerImage.src} alt="menu" />
           </div>
 
           <div className={styles.nav}>
